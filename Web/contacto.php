@@ -6,17 +6,17 @@ $para = 'tlatolibot@mensa.org.mx';
 $titulo = 'Contacto desde la Página';
 $header = 'From: ' . $email;
 $msjCorreo = "Nombre: $nombre\n E-Mail: $email\n Mensaje:\n $mensaje";
-  
-if ($_POST['submit']) 
+
+if ($_POST['submit'])
     {
-    if (mail($para, $titulo, $msjCorreo, $header)) 
+    if (mail($para, $titulo, utf8_decode($msjCorreo), $header)) 
         {
         echo "<script language='javascript'>
         alert('Mensaje enviado, muchas gracias.');
         window.location.href = 'https://tlatolibot.mensa.org.mx';
         </script>";
-        } 
-    else 
+        }
+    else
         {
         echo "<script language='javascript'>
         alert('Falló el envio');
