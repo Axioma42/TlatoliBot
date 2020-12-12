@@ -33,7 +33,7 @@
 			$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 			$name = $_POST['name'];
         	$last = $_POST['last'];
-			$lang = $_POST['lang']
+			$lang = $_POST['lang'];
 			$sentencia = "INSERT INTO Users (username, pass, name, last, lang) VALUES ('".$mail."', '".$pass."', '".$name."', '".$last."', '".$lang."', CURRENT_TIMESTAMP())";
 			$resultado = mysqli_query($link, $sentencia); 
     		if(!$resultado)
