@@ -3,7 +3,7 @@
 
 	if(isset($_SESSION['logged']) and ($_SESSION['logged'])){
         echo '<script>alert("Usuario ya ha iniciado sesión")
-                self.location = "index.html"</script>';
+                self.location = "../index.html"</script>';
     }
 
 	require("datosConexion.php");
@@ -32,7 +32,7 @@
     if(mysqli_num_rows($resultado)==0){
 		mysqli_close($link);
         echo '<script>alert("correo y/o contrase\u00f1a incorrectos")
-                self.location = "index.html"</script>';
+                self.location = "login.html"</script>';
 	}
 
     //Resultado no nulo -> verifica contraseña
@@ -47,11 +47,11 @@
 			$_SESSION['last']=$fila['last'];
 			$_SESSION['lang']=$fila['lang'];
 			$_SESSION['join_date']=$fila['join_date'];
-			header("Location: index.html");
+			header("Location: ../index.html");
 			//Contraseña incorrecta
 		}else{
 			echo '<script>alert("correo y/o contrase\u00f1a incorrectos")
-                self.location = "index.html"</script>';
+                self.location = "login.html"</script>';
 		}
     	}
 	
