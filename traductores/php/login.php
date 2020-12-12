@@ -6,7 +6,7 @@
                 self.location = "../index.html"</script>';
     }
 
-	require("../../Sección_Traducciones/php/datosConexion.php");
+	require("datosConexion.php");
     //Conexión a la BD
 	if(!($link = mysqli_connect($db_host, $db_user, $db_pass, $db_name)))
         printf("Error: %s", mysqli_connect_error());
@@ -32,7 +32,7 @@
     if(mysqli_num_rows($resultado)==0){
 		mysqli_close($link);
         echo '<script>alert("correo y/o contrase\u00f1a incorrectos")
-                self.location = "login.html"</script>';
+                self.location = "../login/login.html"</script>';
 	}
 
     //Resultado no nulo -> verifica contraseña
@@ -51,7 +51,7 @@
 			//Contraseña incorrecta
 		}else{
 			echo '<script>alert("correo y/o contrase\u00f1a incorrectos")
-                self.location = "login.html"</script>';
+                self.location = "../login/login.html"</script>';
 		}
     	}
 	

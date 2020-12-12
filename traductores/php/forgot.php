@@ -53,7 +53,7 @@
 		$cuerpoMensaje .= "Correo: ".$destinatarioEmail."\r\n";
 		$cuerpoMensaje .= "Ingrese a la siguiente liga o cópiela en su navegador y cambie su contraseña:\r\n";
 		$cuerpoMensaje .= "https://www.tlatolibot.com/traductores/recovery.php?forgot_code=".$forgot_code."\r\n";
-		$cuerpoMensaje .= "Favor de no responder a este correo."
+		$cuerpoMensaje .= "Favor de no responder a este correo.";
 		//fin cuerpo del email.
 
 		//cabecera del email (forma correcta de codificarla)
@@ -75,10 +75,10 @@
 		//envio el email y verifico la respuesta de la función "email" (true o false)
 		if (mail($destinatarioEmail, $asuntoEmail, $mensaje, $header)) {
 			echo '<script>alert("Se le ha enviado un correo electrónico\nRevise su bandeja de entrada")
-					self.location = "../index.php"</script>';
+					self.location = "../../index.html"</script>';
 		} else {
 			echo '<script>alert("Se ha producido un error\nIntente más tarde")
-					self.location = "forgot.html"</script>';
+					self.location = "../login/forgot.html"</script>';
 		}
 		mysqli_free_result($resultado);
 		mysqli_close($link);

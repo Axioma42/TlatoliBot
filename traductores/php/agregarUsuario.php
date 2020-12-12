@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	//if(isset($_SESSION['logged']) and (!$_SESSION['logged']))
-	require("../../Sección_Traducciones/php/datosConexion.php");
+	require("datosConexion.php");
     //Conexión a la BD
 	if(!($link = mysqli_connect($db_host, $db_user, $db_pass, $db_name)))
         printf("Error: %s", mysqli_connect_error());
@@ -21,13 +21,13 @@
 	if(mysqli_num_rows($resultado)>0){
 		mysqli_close($link);
 		echo '<script>alert("Ya existe una cuenta con ese correo electrónico registrado")
-                self.location = "index.html"</script>';
+                self.location = "../login/login.html"</script>';
 	}
     else {
 		//Verifica que la contraseña coincida con la confirmación
 		if($_POST['pass']!=$_POST['passConfirm'])
 			echo '<script>alert("Las contraseñas no coinciden")
-                self.location = "index.html"</script>';
+                self.location = "../login/register.html"</script>';
 		else {
 			//Hash del password
 			$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
@@ -47,7 +47,7 @@
         		$_SESSION['last']=$last;
 				$_SESSION['phone']=$phone;
 				echo '<script>alert("Registro exitoso")
-                self.location = "index.html"</script>';
+                self.location = "../index.html"</script>';
 				}
     		}
 		}
