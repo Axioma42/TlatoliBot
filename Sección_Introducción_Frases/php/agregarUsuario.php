@@ -34,7 +34,7 @@
 			$name = $_POST['name'];
         	$last = $_POST['last'];
 			$lang = $_POST['lang'];
-			$sentencia = "INSERT INTO Users (username, pass, name, last, lang) VALUES ('".$mail."', '".$pass."', '".$name."', '".$last."', '".$lang."', CURRENT_TIMESTAMP())";
+			$sentencia = "INSERT INTO Users (username, pass, name, last, lang, join_date) VALUES ('".$mail."', '".$pass."', '".$name."', '".$last."', '".$lang."', CURRENT_TIMESTAMP())";
 			$resultado = mysqli_query($link, $sentencia); 
     		if(!$resultado)
         		die("Error en la sentencia ".mysqli_error($link));
