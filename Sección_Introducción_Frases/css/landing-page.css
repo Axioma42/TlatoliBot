@@ -4,6 +4,43 @@
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-landing-page/blob/master/LICENSE)
  */
 
+.btn-primary {
+  color: #fff;
+  background-color:#f89822;
+  border-color: #f89822;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #d71f2b;
+  border-color: #a41e23;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -21,10 +58,10 @@ h6 {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../img/bg-masthead.jpg") no-repeat center center;
+  background: url("../img/máscara.png") no-repeat center center;
   background-size: cover;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 header.masthead .overlay {
@@ -66,6 +103,10 @@ header.masthead h1 {
   }
 }
 
+.text-primary {
+  color: #f89822 !important;
+}
+
 .features-icons {
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -104,7 +145,7 @@ header.masthead h1 {
 .call-to-action {
   position: relative;
   background-color: #343a40;
-  background: url("../img/bg-masthead.jpg") no-repeat center center;
+  background: url("../img/máscara_slim.png") no-repeat center center;
   background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -118,6 +159,17 @@ header.masthead h1 {
   top: 0;
   left: 0;
   opacity: 0.3;
+}
+
+a {
+  color: #f89822;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #d71f2b;
+  text-decoration: underline;
 }
 
 footer.footer {
