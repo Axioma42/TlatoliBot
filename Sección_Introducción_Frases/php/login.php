@@ -18,7 +18,7 @@
     $pass = $_POST['pass'];
 
     //Query
-    $sentencia = "SELECT * FROM Users WHERE (mail='".$mail."' OR username='".$mail."')";
+    $sentencia = "SELECT * FROM Users WHERE username='".$mail."'";
 
     // Ejecuta la sentencia SQL
     $resultado = mysqli_query($link, $sentencia); 
@@ -28,10 +28,10 @@
 
     $fila = mysqli_fetch_array($resultado);
 
-    //Resultado nulo -> usuraio o correo incorrectos
+    //Resultado nulo -> usuario o correo incorrectos
     if(mysqli_num_rows($resultado)==0){
 		mysqli_close($link);
-        echo '<script>alert("usuario y/o contrase\u00f1a incorrectos")
+        echo '<script>alert("correo y/o contrase\u00f1a incorrectos")
                 self.location = "index.html"</script>';
 	}
 
@@ -47,10 +47,10 @@
 			$_SESSION['last']=$fila['last'];
 			$_SESSION['lang']=$fila['lang'];
 			$_SESSION['join_date']=$fila['join_date'];
-			header("Location: traductores.php");
+			header("Location: index.html");
 			//Contraseña incorrecta
 		}else{
-			echo '<script>alert("usuario y/o contrase\u00f1a incorrectos")
+			echo '<script>alert("correo y/o contrase\u00f1a incorrectos")
                 self.location = "index.html"</script>';
 		}
     	}
