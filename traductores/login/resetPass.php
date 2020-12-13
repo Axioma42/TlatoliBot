@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +24,7 @@
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>¿Olvidaste tu Contraseña?</h3>
+				<h3>Renueva tu contraseña</h3>
 				<!-- <div class="d-flex justify-content-end social_icon">
 					<span><i class="fab fa-facebook-square"></i></span>
 					<span><i class="fab fa-google-plus-square"></i></span>
@@ -28,13 +32,18 @@
 				</div> -->
 			</div>
 			<div class="card-body">
-				<form method="post" action="../php/forgot.php">
+				<form method="post" action="../php/resetPass.php">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="email" name="mail" required="true" class="form-control" placeholder="Correo electrónico">
-						
+						<input required= "true" name="pass" placeholder="Contraseña nueva" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contraseña nueva'" type="password" class="form-control">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" required= "true" name="passConfirm" placeholder="Confirma nueva contraseña" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirma nueva contraseña'" class="form-control">
 					</div>
 					
 					<div class="form-group">
@@ -44,7 +53,7 @@
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					Si olvidaste tu contraseña, ingresa el correo electrónico ligado a tu cuenta y te enviaremos un correo para que recuperes tu contraseña.
+					Elige una nueva contraseña.
 				</div>
 			</div>
 		</div>

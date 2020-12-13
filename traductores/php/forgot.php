@@ -24,7 +24,7 @@
     if(mysqli_num_rows($resultado)==0){
 		mysqli_close($link);
         echo '<script>alert("No existe una cuenta asociada a ese correo")
-                self.location = "fogot.html"</script>';
+                self.location = "../login/forgot.html"</script>';
 	}
 
     //Resultado no nulo -> genera forgot_code, agrega a db y envía correo
@@ -52,7 +52,7 @@
 		$cuerpoMensaje = "Nombre: ".$destinatarioNombre."\r\n";
 		$cuerpoMensaje .= "Correo: ".$destinatarioEmail."\r\n";
 		$cuerpoMensaje .= "Ingrese a la siguiente liga o cópiela en su navegador y cambie su contraseña:\r\n";
-		$cuerpoMensaje .= "https://www.tlatolibot.com/traductores/recovery.php?forgot_code=".$forgot_code."\r\n";
+		$cuerpoMensaje .= "https://www.tlatolibot.com/traductores/php/recovery.php?forgot_code=".$forgot_code."\r\n";
 		$cuerpoMensaje .= "Favor de no responder a este correo.";
 		//fin cuerpo del email.
 
