@@ -200,5 +200,5 @@ if(isset($_SESSION['logged']) and ($_SESSION['logged'])){
 <?php
 }
 else{echo '<script>alert("Inicie sesión para ingresar al portal de traductores")
-	self.location = "traductores/login/login.html"</script>';
+	self.location = "login/login.html"</script>';
 	}
