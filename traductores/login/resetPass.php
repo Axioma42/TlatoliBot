@@ -32,7 +32,7 @@ session_start();
 				</div> -->
 			</div>
 			<div class="card-body">
-				<form method="post" action="../php/resetPass.php">
+				<form method="post" action="../php/action_reset.php">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>

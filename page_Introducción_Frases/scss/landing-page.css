@@ -1,0 +1,174 @@
+body {
+2		
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+3		
+4		
+h1,
+5		
+h2,
+6		
+h3,
+7		
+h4,
+8		
+h5,
+9		
+h6 {
+10		
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+11		
+  font-weight: 700; }
+12		
+13		
+header.masthead {
+14		
+  position: relative;
+15		
+  background-color: #343a40;
+16		
+  background: url("../img/bg-masthead.jpg") no-repeat center center;
+17		
+  -webkit-background-size: cover;
+18		
+  -moz-background-size: cover;
+19		
+  -o-background-size: cover;
+20		
+  background-size: cover;
+21		
+  padding-top: 8rem;
+22		
+  padding-bottom: 8rem; }
+23		
+  header.masthead .overlay {
+24		
+    position: absolute;
+25		
+    background-color: #212529;
+26		
+    height: 100%;
+27		
+    width: 100%;
+28		
+    top: 0;
+29		
+    left: 0;
+30		
+    opacity: 0.3; }
+31		
+  header.masthead h1 {
+32		
+    font-size: 2rem; }
+33		
+  @media (min-width: 768px) {
+34		
+    header.masthead {
+35		
+      padding-top: 12rem;
+36		
+      padding-bottom: 12rem; }
+37		
+      header.masthead h1 {
+38		
+        font-size: 3rem; } }
+39		
+40		
+.showcase .showcase-text {
+41		
+  padding: 3rem; }
+42		
+.showcase .showcase-img {
+43		
+  min-height: 30rem;
+44		
+  background-size: cover; }
+45		
+@media (min-width: 768px) {
+46		
+  .showcase .showcase-text {
+47		
+    padding: 7rem; } }
+48		
+49		
+.features-icons {
+50		
+  padding-top: 7rem;
+51		
+  padding-bottom: 7rem; }
+52		
+  .features-icons .features-icons-item {
+53		
+    max-width: 20rem; }
+54		
+    .features-icons .features-icons-item .features-icons-icon {
+55		
+      height: 7rem; }
+56		
+      .features-icons .features-icons-item .features-icons-icon i {
+57		
+        font-size: 4.5rem; }
+58		
+    .features-icons .features-icons-item:hover .features-icons-icon i {
+59		
+      font-size: 5rem; }
+60		
+61		
+.testimonials {
+62		
+  padding-top: 7rem;
+63		
+  padding-bottom: 7rem; }
+64		
+  .testimonials .testimonial-item {
+65		
+    max-width: 18rem; }
+66		
+    .testimonials .testimonial-item img {
+67		
+      max-width: 12rem;
+68		
+      box-shadow: 0px 5px 5px 0px #adb5bd; }
+69		
+70		
+.call-to-action {
+71		
+  position: relative;
+72		
+  background-color: #343a40;
+73		
+  background: url("../img/bg-masthead.jpg") no-repeat center center;
+74		
+  -webkit-background-size: cover;
+75		
+  -moz-background-size: cover;
+76		
+  -o-background-size: cover;
+77		
+  background-size: cover;
+78		
+  padding-top: 7rem;
+79		
+  padding-bottom: 7rem; }
+80		
+  .call-to-action .overlay {
+81		
+    position: absolute;
+82		
+    background-color: #212529;
+83		
+    height: 100%;
+84		
+    width: 100%;
+85		
+    top: 0;
+86		
+    left: 0;
+87		
+    opacity: 0.3; }
+88		
+89		
+footer.footer {
+90		
+  padding-top: 4rem;
+91		
+  padding-bottom: 4rem; }
