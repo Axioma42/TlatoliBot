@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background-image: url('../../Sección_Traducciones/login/img/máscara_negro.png');
+background-image: url('../../traductores/login/img/máscara_negro.png');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;

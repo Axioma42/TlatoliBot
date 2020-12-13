@@ -7,8 +7,8 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../../../../Sección_Traducciones/vendor/fontawesome-free/webfonts/fa-regular-400.eot");
-  src: url("../../../../Sección_Traducciones/vendor/fontawesome-free/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../../../../Sección_Traducciones/vendor/fontawesome-free/webfonts/fa-regular-400.woff2") format("woff2"), url("../../../../Sección_Traducciones/vendor/fontawesome-free/webfonts/fa-regular-400.woff") format("woff"), url("../../../../Sección_Traducciones/vendor/fontawesome-free/webfonts/fa-regular-400.ttf") format("truetype"), url("../../../../Sección_Traducciones/vendor/fontawesome-free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("../../../../traductores/");
+  src: url("../../../../traductores/") format("embedded-opentype"), url("../../../../traductores/vendor/fontawesome-free/webfonts/fa-regular-400.woff2") format("woff2"), url("../../../../traductores/vendor/fontawesome-free/webfonts/fa-regular-400.woff") format("woff"), url("../../../../traductores/vendor/fontawesome-free/webfonts/fa-regular-400.ttf") format("truetype"), url("../../../../traductores/vendor/fontawesome-free/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Free';
