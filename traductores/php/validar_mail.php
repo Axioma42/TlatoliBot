@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') { //solo ingreso a este bloque de cód
 		$_SESSION['lang']=$fila['lang'];
 		$_SESSION['join_date']=$fila['join_date'];
 		
-		$sentencia = "INSERT INTO Users (username, pass, name, last, lang, join_date, forgot_code) VALUES ('".$fila['username']."', '".$fila['pass']."', '".$fila['name']."', '".$fila['last']."', '".$fila['lang']."', '".fila['join_date']."', NULL)";
+		$sentencia = "INSERT INTO Users (username, pass, name, last, lang, join_date, forgot_code) VALUES ('".$fila['username']."', '".$fila['pass']."', '".$fila['name']."', '".$fila['last']."', '".$fila['lang']."', '".$fila['join_date']."', NULL)";
 		$resultado = mysqli_query($link, $sentencia); 
     	if(!$resultado)
         	die("Error en la sentencia ".mysqli_error($link));
