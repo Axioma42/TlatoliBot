@@ -19,5 +19,6 @@ if(isset($_SESSION['logged']) and ($_SESSION['logged'])){
 	mysqli_free_result($resultado);
 	mysqli_close($link);
 	echo '<script>alert("Traducción guardada correctamente.")
-	self.location = "traductores/index.php"</script>';
+	self.location = "../index.php"</script>';
+}
 ?>

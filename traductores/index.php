@@ -10,7 +10,7 @@ if(isset($_SESSION['logged']) and ($_SESSION['logged'])){
         printf("Error: %s", mysqli_connect_error());
 
     mysqli_query($link, "SET NAMES 'utf8'");
-	$sentencia = "SELECT espanol FROM Corpus WHERE nahuatl IS NULL ORDER BY rand() LIMIT 1";
+	$sentencia = "SELECT * FROM Corpus WHERE nahuatl IS NULL ORDER BY rand() LIMIT 1";
 	$resultado = mysqli_query($link, $sentencia);
 	if(!$resultado) 
         die("Error en la sentencia ".mysqli_error($link));
@@ -71,7 +71,7 @@ if(isset($_SESSION['logged']) and ($_SESSION['logged'])){
                 <input type="text" name="trans" class="form-control form-control-lg" placeholder="Introduce tu respuesta...">
               </div>
 				<div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="hidden" name="id" value="<?php echo($aleat);?>">
+                <input type="hidden" name="id" value="<?php echo($fila['id']);?>">
               </div>
               <div class="col-12 col-md-3">
                 <button type="submit" class="btn btn-block btn-lg btn-primary">Enviar</button>
