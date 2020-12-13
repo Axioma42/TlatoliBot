@@ -1,3 +1,8 @@
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+	</head>
 <?php
 	session_start();
 
@@ -57,3 +62,4 @@
 	
 
 ?>
+</html>
