@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(isset($_SESSION['logged']) and (!$_SESSION['logged']))
+	if(isset($_SESSION['logged']) and ($_SESSION['logged']))
 	{
 	require("datosConexion.php");
     //Conexión a la BD
@@ -30,7 +30,7 @@
         		die("Error en la sentencia ".mysqli_error($link));
 			mysqli_close($link);
 			echo '<script>alert("Modificación exitosa")
-                self.location = "../index.html"</script>';
+                self.location = "../index.php"</script>';
 
 		}
 		mysqli_free_result($resultado);
