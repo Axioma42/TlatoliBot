@@ -10,8 +10,7 @@ if(isset($_SESSION['logged']) and ($_SESSION['logged'])){
         printf("Error: %s", mysqli_connect_error());
 
     mysqli_query($link, "SET NAMES 'utf8'");
-	$aleat = rand(0,125429);
-	$sentencia = "SELECT espanol FROM Corpus WHERE id=".$aleat;
+	$sentencia = "SELECT espanol FROM Corpus WHERE nahuatl IS NULL ORDER BY rand() LIMIT 1";
 	$resultado = mysqli_query($link, $sentencia);
 	if(!$resultado) 
         die("Error en la sentencia ".mysqli_error($link));

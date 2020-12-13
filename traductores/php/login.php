@@ -1,14 +1,9 @@
-<html lang="es">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-	</head>
 <?php
 	session_start();
 
 	if(isset($_SESSION['logged']) and ($_SESSION['logged'])){
         echo '<script>alert("Usuario ya ha iniciado sesión")
-                self.location = "../index.html"</script>';
+                self.location = "../index.php"</script>';
     }
 
 	require("datosConexion.php");
@@ -52,7 +47,8 @@
 			$_SESSION['last']=$fila['last'];
 			$_SESSION['lang']=$fila['lang'];
 			$_SESSION['join_date']=$fila['join_date'];
-			header("Location: ../index.html");
+			echo '<script>alert("Bienvenido")
+                self.location = "../index.php"</script>';
 			//Contraseña incorrecta
 		}else{
 			echo '<script>alert("correo y/o contrase\u00f1a incorrectos")
@@ -62,4 +58,3 @@
 	
 
 ?>
-</html>
