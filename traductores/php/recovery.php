@@ -27,7 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') { //solo ingreso a este bloque de cód
 		$_SESSION['last']=$fila['last'];
 		$_SESSION['lang']=$fila['lang'];
 		$_SESSION['join_date']=$fila['join_date'];
-		
+		$_SESSION['forgot_code']=$forgot_code;
+		header("Location: action_reset.php");
 	}
 }
 
