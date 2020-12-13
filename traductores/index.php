@@ -4,7 +4,7 @@ session_start();
 if(isset($_SESSION['logged']) and ($_SESSION['logged'])){
 
 	//Elige una frase aleatoria que no haya sido traducida
-	require("datosConexion.php");
+	require("php/datosConexion.php");
     //Conexión a la BD
 	if(!($link = mysqli_connect($db_host, $db_user, $db_pass, $db_name)))
         printf("Error: %s", mysqli_connect_error());
