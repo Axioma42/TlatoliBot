@@ -12,7 +12,7 @@ if(isset($_SESSION['logged']) and ($_SESSION['logged'])){
     mysqli_query($link, "SET NAMES 'utf8'");
 	$trans = $_POST['trans'];
 	$id = $_POST['id'];
-	$sentencia = "UPDATE Corpus SET nahuatl = '".$trans."' WHERE Corpus.id = '".$id."'";
+	$sentencia = "UPDATE Corpus SET nahuatl = '".$trans."', traductor='".$_SESSION['username']."' WHERE Corpus.id = '".$id."'";
 	$resultado = mysqli_query($link, $sentencia);
 	if(!$resultado) 
         die("Error en la sentencia ".mysqli_error($link));
