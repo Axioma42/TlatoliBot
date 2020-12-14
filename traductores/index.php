@@ -49,7 +49,10 @@ if(isset($_SESSION['logged']) and ($_SESSION['logged'])){
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
       <a class="navbar-brand" href="#">TLATOLIBOT</a>
-      <a class="btn btn-primary" href="#">Cerrar Sesión</a>
+      <form action="php/logout.php" method="post">
+        <input type="submit" value="Cerrar Sesión" name="btn">
+      </form>
+      <!-- <a class="btn btn-primary" href="#">Cerrar Sesión</a> -->
     </div>
   </nav>
 
