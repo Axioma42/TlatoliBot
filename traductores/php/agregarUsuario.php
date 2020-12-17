@@ -55,7 +55,7 @@
 		//cuerpo del email:
 		$cuerpoMensaje = "Nombre: ".$destinatarioNombre."\r\n";
 		$cuerpoMensaje .= "Correo: ".$destinatarioEmail."\r\n";
-		$cuerpoMensaje .= "Ingrese a la siguiente liga o cópiela en su navegador y cambie su contraseña:\r\n";
+		$cuerpoMensaje .= "Ingrese a la siguiente liga o cópiela en su navegador para verificar su cuenta de correo:\r\n";
 		$cuerpoMensaje .= "https://www.tlatolibot.com/traductores/php/validar_mail.php?validation_code=".$validation_code."\r\n";
 		$cuerpoMensaje .= "Favor de no responder a este correo.";
 		//fin cuerpo del email.
@@ -78,6 +78,30 @@
 		//$mensaje .= "--" . $uid . "--";
 		//envio el email y verifico la respuesta de la función "email" (true o false)
 		if (mail($destinatarioEmail, $asuntoEmail, $mensaje, $header)) {
+			//Avisa que se registró un nuevo usuario
+			$origenNombre = 'users.Tlatolibot.com';
+			$origenEmail = 'noreply@users.tlatolibot.com';
+			$destinatarioEmail = 'admin@tlatolibot.com';
+			$destinatarioNombre = "Administrador";
+			$uid = md5(uniqid(time()));
+			$asuntoEmail = 'Nuevo usuario registrado - Tlatolibot';
+			//cuerpo del email
+			$cuerpoMensaje = "Registro de nuevo usuario.\r\n";
+			$cuerpoMensaje .= "Nombre: ".$name." ".$last."\r\n";
+			$cuerpoMensaje .= "Correo: ".$mail."\r\n";
+			$cuerpoMensaje .= "Lengua: ".$lang."\r\n";
+			//cabecera del email
+			$header = "From: " . $origenNombre . " <" . $origenEmail . ">\r\n";
+			$header .= "Reply-To: " . $origenEmail . "\r\n";
+			$header .= "MIME-Version: 1.0\r\n";
+			$header .= "Content-Type: multipart/mixed; boundary=\"" . $uid . "\"\r\n\r\n";
+			//armado del mensaje
+			$mensaje = "--" . $uid . "\r\n";
+			$mensaje .= "Content-type:text/plain; charset=utf-8\r\n";
+			$mensaje .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+			$mensaje .= $cuerpoMensaje . "\r\n\r\n";
+			$mensaje .= "--" . $uid . "\r\n";
+			mail($destinatarioEmail, $asuntoEmail, $mensaje, $header);
 			echo '<script>alert("Se le ha enviado un correo electrónico\nRevise su bandeja de entrada")
 					self.location = "../login/login.html"</script>';
 		} else {
